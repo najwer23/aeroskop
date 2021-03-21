@@ -11,8 +11,8 @@
 }
 
 .menu-title {
-    height: 5rem;
-    line-height: 5rem;
+    height: 6rem;
+    line-height: 6rem;
     letter-spacing: 2px;
     font-size: 1.4rem;
     word-spacing: 5px;
@@ -65,7 +65,7 @@ nav, .menu-list a {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid orange;
-    top: 20px;
+    top: 25px;
     left: -10px;
     z-index: 10000;
 }
@@ -123,10 +123,9 @@ nav, .menu-list a {
 }
 
 .menu-mobile {
-    /* margin-top: -84px; */
     height: 100vh;
     width: 100%;
-    background-color: #A67F68;
+    background-color:#343742;
     visibility: hidden;
     transform: translateX(-100%);
     position: fixed;
@@ -153,9 +152,7 @@ nav, .menu-list a {
     min-height: calc(100% - 200px);
     padding-top: 100px;
     padding-bottom: 100px;
-    text-shadow: 1px 1px whitesmoke;
-
-  }
+}
 
   .menu-mobile-links a {
     text-decoration: none;

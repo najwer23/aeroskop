@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/Nav.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMugHot } from '@fortawesome/free-solid-svg-icons'
+import { faFilm } from '@fortawesome/free-solid-svg-icons'
 
 const menuRoutes = [
     { path: "/", name: 'Home'},
@@ -59,7 +59,7 @@ class MobileMenu extends Hamburger {
         return (
             <div className="menu-mobile">   
                 <ul className="menu-mobile-links">
-                    <li>aeroskop</li>
+                    <li><FontAwesomeIcon style={{ color: "orange" }} icon={faFilm} size="lg" /> Aeroskop</li>
                     {menuRoutes.map((v, i) => <li onClick={this.menuMobileClick} key={i}><Link to={v.path}>{v.name}</Link></li>)}
                     <li>Mariusz Najwer <br />2021</li>
                 </ul>
@@ -75,13 +75,14 @@ export default function Nav() {
             <div className="menu">
                 <div className="menu-box">
                     <Hamburger />
-                    <div className="menu-title"> <FontAwesomeIcon style={{ color: "orange" }} icon={faMugHot} size="lg" /> coffee4u </div>
+                    <div className="menu-title"> <FontAwesomeIcon style={{ color: "orange" }} icon={faFilm} size="lg" /> Aeroskop </div>
                     <ul className="menu-list">
                         {menuRoutes.map((v, i) => <li key={i}><Link to={v.path}>{v.name}</Link></li>)}
                     </ul>
                 </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#24272b" fillOpacity="1" d="M0,32L80,32C160,32,320,32,480,48C640,64,800,96,960,106.7C1120,117,1280,107,1360,101.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#24272b" fillOpacity="1" d="M0,96L120,80C240,64,480,32,720,21.3C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#0099ff" fill-opacity="1" d="M0,96L120,80C240,64,480,32,720,21.3C960,11,1200,21,1320,26.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg> */}
         </nav>
     )
 }
