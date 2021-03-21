@@ -11,10 +11,6 @@ const menuRoutes = [
 
 
 class Hamburger extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         window.addEventListener("resize", this.menuMobileHide);
     }
