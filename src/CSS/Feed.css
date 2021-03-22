@@ -1,0 +1,37 @@
+main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.feed-box {
+    padding: 0;
+    margin: 0;
+}
+
+.feed-box-item {
+    display: flex;
+    width: 700px;
+}
+
+.feed-box-item img {
+    height: 300px;
+}
+
+.feed-box-item-desc{
+    width: 100%;
+    padding: 0px 50px 50px 50px;
+    color: white;
+    /* background-color: green; */
+}
+
+.feed-box-item-desc h1 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+aside {
+    background-color: red;
+    width: 100%;
+}
