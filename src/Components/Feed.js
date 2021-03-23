@@ -19,7 +19,7 @@ export default function Feed() {
                                     <p>{v.desc}</p>
                                 </div>
                                 <div className="">
-                                    <Link  key={i} to={v.path} ><div className='btn wave link'>Read more!</div></Link>
+                                    <Link  key={i} to={v.path} ><div className='btn wave link'>Czytaj więcej!</div></Link>
                                 </div>
                             </div>
                         </li>
