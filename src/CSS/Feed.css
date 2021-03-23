@@ -3,6 +3,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    align-items: flex-start;
 }
 
 .feed-box {
@@ -13,6 +14,11 @@ main {
 .feed-box-item {
     display: flex;
     width: 700px;
+    margin-bottom: 100px;
+}
+
+.feed-box-item:last-child {
+    margin-bottom: 50;
 }
 
 .feed-box-item img {
@@ -27,8 +33,8 @@ main {
 
 .atBottom {
     display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .feed-box-item-desc h1 {
@@ -37,6 +43,20 @@ main {
 }
 
 aside {
-    background-color: red;
+    background-color: #24272b;
     width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    min-height: 70px;
+    overflow:auto
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+aside a div {
+    color: white;
+    padding-bottom: 7px;
 }

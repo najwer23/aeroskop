@@ -1,29 +1,36 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../CSS/Feed.css';
+import {feedArr} from './RoutPath';
+
 
 export default function Feed() {
     return (
         <main>
             <article>
                 <ul className="feed-box">
-                    <li className="feed-box-item">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/raya.jpg`} alt="Raya i ostatni smok - plakat" ></img>
-                        <div className="feed-box-item-desc atBottom">
-                            <div>
-                                <h1>RAYA I OSTATNI SMOK</h1>
-                                <h3>Raya and the Last Dragon</h3>
-                                <p>W zamieszkałym przez starożytną cywilizację królestwie Kumandra, wojowniczka Raya usiłuje odnaleźć ostatniego smoka.</p>
+                    {feedArr.map((v, i) => (
+                        <li className="feed-box-item" key={i}>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/${v.pathPoster}`} alt={v.titleEnglish + " - poster"} ></img>
+                            <div className="feed-box-item-desc atBottom">
+                                <div>
+                                    <h1>{v.titleEnglish}</h1>
+                                    <h3>{v.titlePolish}</h3>
+                                    <p>{v.desc}</p>
+                                </div>
+                                <div className="">
+                                    <Link  key={i} to={v.path} ><div className='btn wave link'>Read more!</div></Link>
+                                </div>
                             </div>
-                            <div className="">
-                                <Link to={"/drinks"} ><div className='btn wave link'>Read more!</div></Link>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    ))}
                 </ul>
             </article>
             <aside>
-                kjhg
+                <h3>Archiwum</h3>
+                {feedArr.map((v, i) => (
+                    <Link to={v.path} ><div>{v.titleEnglish}</div></Link>
+                    ))}
             </aside>
         </main>
     )

@@ -1,7 +1,7 @@
 import './CSS/muliFont.css';
 import './CSS/App.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Home from './Components/Home';
+import {routes} from './Components/RoutPath';
 
 function RouteWithSubRoutes(route) {
   return (
@@ -13,11 +13,6 @@ function RouteWithSubRoutes(route) {
 }
 
 export default function App() {
-  const routes = [
-    { path: "/", component: Home, name: 'Home', exact: null },
-    // { path: "/test", component: Test, name: 'Test' }
-  ];
-
   return (
     <div>
       <Router>
