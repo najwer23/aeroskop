@@ -27,10 +27,18 @@ export default function Feed() {
                 </ul>
             </article>
             <aside>
-                <h3>Archiwum</h3>
-                {feedArr.map((v, i) => (
-                    <Link to={v.path} ><div>{v.titleEnglish}</div></Link>
+                <div className="aside-block">
+                    <h3>Archiwum</h3>
+                    {feedArr.map((v, i) => (
+                        <Link key={i} to={v.path} ><div>{v.titleEnglish}</div></Link>
                     ))}
+                </div>
+                <div className="aside-block">
+                    <h3>Archiwum</h3>
+                    {feedArr.map((v, i) => (
+                        <Link key={i} to={v.path} ><div>{v.titleEnglish}</div></Link>
+                    ))}
+                </div>
             </aside>
         </main>
     )

@@ -22,7 +22,7 @@ main {
 }
 
 .feed-box-item img {
-    height: 300px;
+    width: 200px;
 }
 
 .feed-box-item-desc{
@@ -42,21 +42,66 @@ main {
     margin-top: 0;
 }
 
-aside {
+aside{ 
+    width: 260px;
+}
+
+.aside-block {
     background-color: #24272b;
     width: 100%;
     border-radius: 10px;
     padding: 20px;
     color: white;
     min-height: 70px;
-    overflow:auto
+    margin-bottom: 20px;
 }
 
-aside h3 {
+.feed-box h3, .aside-block h3 {
     margin-top: 0;
+    font-weight: lighter;
 }
 
-aside a div {
+.aside-block a div {
     color: white;
     padding-bottom: 7px;
+}
+
+.aside-block a div:hover {
+    color: orange;
+}
+
+
+@media (max-width: 1000px) {
+    main {
+        width: 90%;
+        display: block;
+        margin: 25px 5% auto 5%;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .aside-block {
+        width: 90%;
+    }
+
+    .feed-box-item {
+        width: 100%;
+        margin-bottom: 75px;
+    }
+
+    .feed-box-item-desc h1 {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .feed-box-item {
+        display: block;
+    }
+
+    .feed-box-item-desc {
+        padding: 0;
+    }
 }
