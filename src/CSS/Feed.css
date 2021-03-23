@@ -21,9 +21,14 @@ main {
 
 .feed-box-item-desc{
     width: 100%;
-    padding: 0px 50px 50px 50px;
+    padding: 0px 50px 0px 50px;
     color: white;
-    /* background-color: green; */
+}
+
+.atBottom {
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feed-box-item-desc h1 {
