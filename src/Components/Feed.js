@@ -27,19 +27,20 @@ export default function Feed() {
                 </ul>
             </article>
             <aside>
-                <div className="aside-block">
-                    <h3>Archiwum</h3>
-                    {feedArr.map((v, i) => (
-                        <Link key={i} to={v.path} ><div>{v.titleEnglish}</div></Link>
-                    ))}
-                </div>
-                <div className="aside-block">
-                    <h3>Archiwum</h3>
-                    {feedArr.map((v, i) => (
-                        <Link key={i} to={v.path} ><div>{v.titleEnglish}</div></Link>
-                    ))}
-                </div>
+                <Archive />
             </aside>
         </main>
     )
 }
+
+function Archive() {
+    return (
+        <div className="aside-block">
+            <h3>Archiwum</h3>
+            {feedArr.map((v, i) => (
+                <Link key={i} to={v.path} ><div>{v.titleEnglish}</div></Link>
+            ))}
+        </div>
+    )
+}
+
