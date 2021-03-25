@@ -1,5 +1,7 @@
 import Home from './Home';
-import Posts from './Posts';
+import KrainaLodu2 from './Posts/KrainaLodu2';
+import RayaLastDragon from './Posts/RayaLastDragon';
+import Posts from './ShowPost';
 
 export const feedArr = [
     {
@@ -9,7 +11,7 @@ export const feedArr = [
         titleEnglish: "Frozen II",
         desc: "Elsa i Anna wraz z przyjaciółmi udają się do Zaczarowanego Lasu w poszukiwaniu pomocy dla swego Królestwa.",
         path: "/frozen-II",
-        componentName: Posts
+        componentName: <KrainaLodu2/>,
     },
     {
         id: "1",
@@ -18,7 +20,7 @@ export const feedArr = [
         titleEnglish: "Raya and the Last Dragon",
         desc: "W zamieszkałym przez starożytną cywilizację królestwie Kumandra, wojowniczka Raya usiłuje odnaleźć ostatniego smoka.",
         path: "/raya-and-the-last-dragon",
-        componentName: Home
+        componentName: <RayaLastDragon/>
     }
 ]
 
@@ -26,8 +28,9 @@ const feedRoutes = [];
 feedArr.map(v=>feedRoutes.push(
     {   
         path: v.path, 
-        component: v.componentName,
-        name: v.componentName.name
+        component: Posts,
+        name: Posts.name,
+        fullText: v.componentName
     }
 ))
 

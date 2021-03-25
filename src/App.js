@@ -7,7 +7,7 @@ function RouteWithSubRoutes(route) {
   return (
     <Route 
       path={route.path}
-      render={props => <route.component {...props} routes={route.routes} />}
+      render={props => <route.component {...props} routes={route.routes} fullText={route.fullText} />}
     />
   );
 }
@@ -17,7 +17,7 @@ export default function App() {
     <div>
       <Router>
         {routes.map((v, i) => (
-          <Switch><RouteWithSubRoutes key={i} {...v} /></Switch>
+          <Switch key={i} ><RouteWithSubRoutes {...v} /></Switch>
         ))}     
       </Router>
     </div>

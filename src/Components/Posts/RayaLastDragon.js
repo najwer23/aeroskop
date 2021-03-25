@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Posts() {
+export default function RayaLastDragon() {
     return (
         <div>
-            hgfds
+            ostatni smok
         </div>
     )
 }
